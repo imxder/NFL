@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Preditiva de Jogadas da NFL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Análise Preditiva de Jogadas da NFL</h1>
+
+        <div class="tabs">
+            <button class="tab-link active" data-tab="predictor">Busca Preditiva (IA)</button>
+            <button class="tab-link" data-tab="visualizer">Visualizador de Jogadas</button>
+        </div>
+
+        <div id="predictor" class="tab-content active">
+            <p class="description">Use os filtros para encontrar as jogadas com o maior potencial de ganho de jardas, de acordo com o modelo de IA.</p>
+            <div class="search-form-grid">
+                <div class="control-group">
+                    <label for="search-player">Jogador (Portador da Bola)</label>
+                    <select id="search-player"><option value="">Todos</option></select>
+                </div>
+                <div class="control-group">
+                    <label for="search-team">Time de Ataque</label>
+                    <select id="search-team"><option value="">Todos</option></select>
+                </div>
+                <div class="control-group">
+                    <label for="search-down">Down</label>
+                    <select id="search-down"><option value="">Todos</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+                </div>
+                <div class="control-group">
+                    <button id="search-btn">Buscar Jogadas</button>
+                </div>
+            </div>
+            <div id="search-results" class="search-results">
+                <p>Os resultados da busca aparecerão aqui.</p>
+            </div>
+        </div>
+        
+        <div id="visualizer" class="tab-content">
+            <div id="visualizer-status" class="status">Carregue uma jogada da aba de busca para visualizar a animação.</div>
+            <div class="animation-container">
+                <canvas id="play-canvas"></canvas>
+            </div>
+            <div class="animation-controls">
+                <button id="play-pause-btn" disabled>▶ Play</button>
+                <input type="range" id="frame-slider" min="1" max="100" value="1" disabled>
+                <span id="frame-counter">Frame: 0 / 0</span>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
