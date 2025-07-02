@@ -1,6 +1,13 @@
 
 # Analise Preditiva de dados do dataset da NFL
 
+Grupo: 
+
+- Alexandre Salgado
+- Gustavo Kauan Storch
+- João Guilherme Schneider
+- João Vitor Defante
+
 Este projeto treina um modelo de analise preditiva com dados do dataset da NFL e disponibiliza uma API Flask para visualizar uma interface onde o usuário podera ver as jogadas prevista pelo modelo.
 
 ---
