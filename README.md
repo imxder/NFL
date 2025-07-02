@@ -5,12 +5,6 @@ Este projeto treina um modelo de analise preditiva com dados do dataset da NFL e
 
 ---
 
-## Requisitos
-
-- Python 3.11 ou superior
-
----
-
 ```mermaid
 graph TD
     A[Interface Web - index.html] -->|Busca por Jogadas| B[API Flask - /api/search]
@@ -24,6 +18,11 @@ graph TD
 
     H[baixar_dataset.py] --> I[Download do Dataset]
 ```
+---
+
+## Requisitos
+
+- Python 3.11 ou superior
 
 ## 1. Instalação
 
