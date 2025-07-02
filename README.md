@@ -110,7 +110,7 @@ python app.py
 Acesse no navegador:
 
 ```
-http://localhost:5000
+http://localhost:5001
 ```
 
 Você verá a interface web abas para ver as jogadas prevista e suas animações.
